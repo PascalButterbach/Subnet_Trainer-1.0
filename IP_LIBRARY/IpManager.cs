@@ -1,48 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IP_LIBRARY
 {
     public class IpManager
     {
-        Random rnd = new Random();
-        private List<Ip> ipDataset = new List<Ip>();
-                
-        public List<Ip> GetIpDataset()
-        {
-            return ipDataset;
-        }
-        
-        public void SetIpDataset(List<Ip> value)
-        {
-            ipDataset = value;
-        }
 
-        public void RandomIp()
-        {
-            string ipString = "192.168."+rnd.Next(0, 256) + "." + rnd.Next(0, 256);
+        readonly List<Ip> ipDataset = new List<Ip>();
 
-            GetIpDataset().Add(new Ip(ipString, rnd.Next(17,31)));
+        public string[] GetDataByIp(string ipAdress)
+        {
+            ipDataset.Add(new Ip(ipAdress));
+            return ReturnDataset();
         }
-        public string[] ReturnQuestion()
+        public string[] GetRandomData()
         {
-            var ipReturn = new string[3];
+            ipDataset.Add(new Ip());
+            return ReturnDataset();
+        }
+        public string[] ReturnDataset()
+        {            
+            var ipReturn = new string[8];
 
-            // IP Adresse
-            ipReturn[0] = ipDataset.Last().ipAdress;
-            ipReturn[1] = Convert.ToString(ipDataset.Last().cidr);
-            ipReturn[2] = ipDataset.Last().getSubnetmask();
-            // toDO 
-            // ipReturn[3] = ipDataset.Last().getNetworkId();
-            // ipReturn[4] = ipDataset.Last().getFirstHost();
-            // ipReturn[5] = ipDataset.Last().getLastHost();
-            // ipReturn[6] = ipDataset.Last().getBroadcast();
+            ipReturn[0] = ipDataset.Last().IpAdress;
+            ipReturn[1] = ipDataset.Last().Netmask;
+            ipReturn[2] = ipDataset.Last().NetworkID;
+            ipReturn[3] = ipDataset.Last().FirstUsable;
+            ipReturn[4] = ipDataset.Last().LastUsable;
+            ipReturn[5] = ipDataset.Last().Broadcast;
+            ipReturn[6] = ipDataset.Last().Usable;
+            ipReturn[7] = ipDataset.Last().Cidr;
             return ipReturn;
         }
+
+        public List<Ip> GetList(int v)
+        {
+            ipDataset.Clear();
+            for (int i = 0; i < v; i++)
+            {
+                ipDataset.Add(new Ip());
+            }
+
+            return ipDataset;
+        }
     }
-
-
 }

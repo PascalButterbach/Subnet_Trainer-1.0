@@ -4,10 +4,21 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>netzwerk.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="bg_home.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\IP_LIBRARY\IP_LIBRARY.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bg_home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

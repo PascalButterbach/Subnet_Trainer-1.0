@@ -1,46 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 
 namespace IP_LIBRARY
 {
     public class Ip
     {
-        public string ipAdress { get; set; }
+        readonly Random rnd = new Random();
+        public string IpAdress { get; set; }
+        public string NetworkID { get; set; }
+        public string Netmask { get; set; }
+        public string Broadcast { get; set; }
+        public string FirstUsable { get; set; }
+        public string LastUsable { get; set; }
+        public string Usable { get; set; }
+        public string Cidr { get; set; }
 
-        public int cidr { get; set; }
-        public Ip(string ipAdress, int cidr)
+
+        // Constructor     
+        public Ip()
         {
-            this.ipAdress = ipAdress;
-            this.cidr = cidr;
+            string ipAdress = rnd.Next(0, 256) + "." + rnd.Next(0, 256) + "." + rnd.Next(0, 256) + "." + rnd.Next(0, 256) + "/" + rnd.Next(1, 31);
+                        
+
+            IPNetwork ipnetwork = IPNetwork.Parse(ipAdress);
+            IpAdress = ipAdress.Substring(0,ipAdress.IndexOf('/'));
+            NetworkID = Convert.ToString(ipnetwork.Network);
+            Netmask = Convert.ToString(ipnetwork.Netmask);
+            Broadcast = Convert.ToString(ipnetwork.Broadcast);
+            FirstUsable = Convert.ToString(ipnetwork.FirstUsable);
+            LastUsable = Convert.ToString(ipnetwork.LastUsable);
+            Usable = Convert.ToString(ipnetwork.Usable);
+            Cidr = Convert.ToString(ipnetwork.Cidr);
+        }
+        public Ip(string ipAdress)
+        {
+            IPNetwork ipnetwork = IPNetwork.Parse(ipAdress);
+            IpAdress = ipAdress.Substring(0, ipAdress.IndexOf('/'));
+            NetworkID = Convert.ToString(ipnetwork.Network);
+            Netmask = Convert.ToString(ipnetwork.Netmask);
+            Broadcast = Convert.ToString(ipnetwork.Broadcast);
+            FirstUsable = Convert.ToString(ipnetwork.FirstUsable);
+            LastUsable = Convert.ToString(ipnetwork.LastUsable);
+            Usable = Convert.ToString(ipnetwork.Usable);
+            Cidr = Convert.ToString(ipnetwork.Cidr);
         }
 
-
-        public uint getBinary()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void getOctets()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string getSubnetmask()
-        {
-            string[] elements = new string[] { "0", "128", "192", "224", "240", "248", "252", "254", "255" };
-            string subnetMask = "";
-
-            for (int i = 0; i < cidr / 8; i++)
-            {
-                subnetMask += "255.";
-            }
-            subnetMask += elements[cidr % 8];
-
-            return subnetMask;
-
-        }
     }
 }

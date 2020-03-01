@@ -1,0 +1,18 @@
+﻿<Page x:Class="SubnettingTrainerWpf.Sites.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SubnettingTrainerWpf.Sites"
+      mc:Ignorable="d" Background="#FF404040"
+      d:DesignHeight="600" d:DesignWidth="620"
+      Title="Home">
+
+    <Grid>
+        <Label Content="SUBNETTING" HorizontalAlignment="Left" Margin="80,290,0,0" VerticalAlignment="Top" Height="120" Width="444" Foreground="White" FontSize="72" Panel.ZIndex="3"/>
+        <Label Content="TRAINER" HorizontalAlignment="Left" Margin="218,354,0,0" VerticalAlignment="Top" Height="110" Width="306" Foreground="White" FontSize="72" Panel.ZIndex="3"/>
+        <Label Content="pascal@butterbach.org" HorizontalAlignment="Left" Margin="414,436,0,0" VerticalAlignment="Top" Height="28" Width="106" Foreground="White" FontSize="8" Panel.ZIndex="3"/>
+        <Image Margin="28,-1,0,10" Stretch="Fill" Source="/bg_home.png" Panel.ZIndex="2"/>
+
+    </Grid>
+</Page>

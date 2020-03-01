@@ -1,0 +1,21 @@
+﻿<Page x:Class="SubnettingTrainerWpf.Sites.Ipv4Generate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SubnettingTrainerWpf.Sites"
+      mc:Ignorable="d" Background="#FF404040" 
+      d:DesignHeight="600" d:DesignWidth="620"
+      Title="Ipv4Generate">
+
+    <Grid>
+        <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0" Background="#FF4F4F4F">
+            <Label Content="Anzahl: " FontSize="15" Foreground="White" Margin="287,0,25,0"/>
+            <TextBox x:Name="tb_ammount" Text="32" Width="40" Height="30" FontSize="18" Margin="0,0,25,0" Background="#FF454545" Foreground="White" />
+            <Button Content="Generieren" Width="178" Height="30" Background="#FF404040" Foreground="White"  Click="Button_Click"/>
+        </StackPanel>
+        <TextBox x:Name="tb_solve" TextWrapping="Wrap" FontSize="16" Background="#FF454545" Foreground="White" Margin="4,74,311,35"/>
+        <TextBox x:Name="tb_solution" TextWrapping="Wrap" FontSize="16" Background="#FF454545" Foreground="White" Margin="313,74,4,35"/>
+
+    </Grid>
+</Page>
