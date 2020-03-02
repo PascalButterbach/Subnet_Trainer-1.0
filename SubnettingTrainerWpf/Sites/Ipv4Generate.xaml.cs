@@ -12,7 +12,9 @@ namespace SubnettingTrainerWpf.Sites
     {
         IpManager ipManager = new IpManager();
         List<Ip> ipList = new List<Ip>();
+        List<Subnet> subnetList = new List<Subnet>();
         int counter;
+        int result = 0;
         public Ipv4Generate()
         {
             InitializeComponent();
@@ -20,8 +22,36 @@ namespace SubnettingTrainerWpf.Sites
 
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            int result = 0;
-            if (int.TryParse(tb_ammount.Text,out result))
+            if (rb_anal.IsChecked == true)
+            {
+                Anal();
+            }
+            else if (rb_split.IsChecked == true)
+            {
+                Split();
+            }
+
+        }
+
+        private void Split()
+        {
+            if (int.TryParse(tb_ammount.Text, out result))
+            {
+                subnetList = ipManager.GetSubnetList(result);
+            }
+            else
+            {
+                subnetList = ipManager.GetSubnetList(20);
+            }
+            FillQuestions(subnetList);
+            FillSolutions(subnetList);
+
+        }
+
+        private void Anal()
+        {
+
+            if (int.TryParse(tb_ammount.Text, out result))
             {
                 ipList = ipManager.GetList(result);
             }
@@ -40,6 +70,39 @@ namespace SubnettingTrainerWpf.Sites
 
             // Aufgaben als Lösung in textbox
         }
+
+
+        private void FillQuestions(List<Subnet> subnetList)
+        {
+            counter = 1;
+            tb_solve.Clear();
+            foreach (var subnet in subnetList)
+            {
+                tb_solve.AppendText("(" + counter + ") BERECHNE FÜR IP:" + subnet.IpAdress + "/" + subnet.CidrOld + "\n");
+                tb_solve.AppendText("CIDR NEU: /" + subnet.CidrNew + "\n");
+                tb_solve.AppendText("1. Subnetz:\n");
+                tb_solve.AppendText("letztes Subnetz:\n");
+                tb_solve.AppendText("Subnetze total:\n\n");
+                counter++;
+            }
+        }
+
+        private void FillSolutions(List<Subnet> subnetList)
+        {
+            counter = 1;
+            tb_solution.Clear();
+            foreach (var subnet in subnetList)
+            {
+                tb_solution.AppendText("(" + counter + ") LÖSUNG FÜR IP:" + subnet.IpAdress + "/" + subnet.CidrOld + "\n");
+                tb_solution.AppendText("CIDR NEU: /" + subnet.CidrNew + "\n");
+                tb_solution.AppendText("1. Subnetz :" + subnet.subnetArr[0] + "\n");
+                tb_solution.AppendText("letztes Subnetz :" + subnet.subnetArr[subnet.subnetArr.Length - 1] + "\n");
+                tb_solution.AppendText("Subnetze total :" + subnet.subnetCount + "\n\n");
+                counter++;
+            }
+        }
+
+
 
         private void FillQuestions(List<Ip> ipList)
         {

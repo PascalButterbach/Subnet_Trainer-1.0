@@ -18,6 +18,7 @@ namespace SubnettingTrainerWpf.Sites
             InitializeComponent();
             Update();
             ClearInput();
+            btn_random.IsEnabled = false;
         }
 
         private void btn_random_Click(object sender, RoutedEventArgs e)
@@ -25,12 +26,16 @@ namespace SubnettingTrainerWpf.Sites
 
             ClearInput();
             Update();
+            btn_random.IsEnabled = false;
+            btn_solution.IsEnabled = true;
             
         }
 
         private void btn_solution_Click(object sender, RoutedEventArgs e)
         {
             CompareUserInput();
+            btn_random.IsEnabled = true;
+            btn_solution.IsEnabled = false;
         }
                
 
@@ -64,7 +69,6 @@ namespace SubnettingTrainerWpf.Sites
                 tb_subnet_total.Foreground = Brushes.Red;
                 tb_subnet_total.Text = Convert.ToString(subnet.subnetCount);
             }
-
 
         }
 

@@ -32,6 +32,9 @@ namespace SubnettingTrainerWpf.Sites
             lbl_calculate.Content = "Berechne: " + dataSet[0] + "/" + dataSet[7];
             ClearSolution();
             ResetUserInput();
+            btn_solution.IsEnabled = true;
+            btn_random.IsEnabled = false;
+            btn_custom.IsEnabled = false;
         }
 
         private void btn_random_Click(object sender, RoutedEventArgs e)
@@ -41,6 +44,9 @@ namespace SubnettingTrainerWpf.Sites
             lbl_calculate.Content = "Berechne: " + dataSet[0] + "/" + dataSet[7];
             ClearSolution();
             ResetUserInput();
+            btn_solution.IsEnabled = true;
+            btn_random.IsEnabled = false;
+            btn_custom.IsEnabled = false;
         }
 
        
@@ -50,6 +56,9 @@ namespace SubnettingTrainerWpf.Sites
             // Lösung zeigen
             CompareUserInput();
             ShowSolution();
+            btn_solution.IsEnabled = false;
+            btn_random.IsEnabled = true;
+            btn_custom.IsEnabled = true;
         }
         void CompareUserInput()
         {

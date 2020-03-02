@@ -10,13 +10,13 @@
 
     <Grid>
         <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0" Background="#FF4F4F4F">
-            <Button x:Name="btn_random"  Content="neue Aufgabe generieren" Margin="270,0,25,0" Width="168" Height="30" Background="#FF404040" Foreground="White" Click="btn_random_Click"/>
+            <Button x:Name="btn_random"  Content="Zufällig" Margin="340,0,25,0" Width="94" Height="30" Background="#FF404040" Foreground="White" Click="btn_random_Click"/>
             <Button x:Name="btn_solution" Content="Lösung anzeigen" Width="130" Height="30" Background="#FF404040" Foreground="White" Click="btn_solution_Click"/>
         </StackPanel>
         <StackPanel Height="448" VerticalAlignment="Top" Margin="25,80,28,0" Background="#FF343434" >
             <Label Content="Subnetting:" Height="36" FontSize="19" Foreground="White" Background="#FF4F4F4F"/>
             <Label x:Name="lbl_calculate" Content="Das Netzwerk: X ist gegeben. CIDR neu : /X" FontSize="19" Foreground="White" />
-            <Label Content="Berechne die neuen Subnetze, nenne die NetzID des ersten " FontSize="19" Foreground="White" />
+            <Label Content="Berechne die Subnetze, nenne die NetzID des ersten " FontSize="19" Foreground="White" />
             <Label Content="und letzten Subnetzes und die Anzahl an Subnetzen total." FontSize="19" Foreground="White" />
             <Label x:Name="lbl_first_subnet" Content="Netzwerk ID 1. Subnetz" Height="31" FontSize="19" Foreground="White" Margin="9,20,0,0" />
             <TextBox x:Name="tb_first_subnet" Text="0.0.0.0/0" Height="30" FontSize="18" Background="#FF454545" Foreground="White" Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>

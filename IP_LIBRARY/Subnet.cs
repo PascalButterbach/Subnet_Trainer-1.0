@@ -5,6 +5,8 @@ namespace IP_LIBRARY
 {
     public class Subnet
     {
+       
+
         readonly Random rnd = new Random();
         public string IpAdress { get; set; }
         public int CidrOld { get; set; }
@@ -15,14 +17,14 @@ namespace IP_LIBRARY
         {
             string rndIP = rnd.Next(0, 256) + "." + rnd.Next(0, 256) + "." + rnd.Next(0, 256) + "." + rnd.Next(0, 256) + "/" + rnd.Next(4, 29);
             IPNetwork ipnetwork = IPNetwork.Parse(rndIP);
-
-
+                        
             IpAdress = rndIP.Substring(0, rndIP.IndexOf('/'));
-
 
             CidrOld = ipnetwork.Cidr;
 
-            CidrNew = rnd.Next(ipnetwork.Cidr, 31);
+
+            int limit = (CidrOld + 20 < 30) ? CidrOld + 20 : 30;
+            CidrNew = rnd.Next(CidrOld + 1, limit);
 
             IPNetworkCollection subneted = ipnetwork.Subnet((byte)CidrNew);
 
