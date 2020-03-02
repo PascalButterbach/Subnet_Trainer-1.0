@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:text="Berechne für: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="35.0dp"
+        android:id="@+id/textView_ip_and_cidr" />
+    <TextView
+        android:text="Netzwerk ID: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView_networkid"
+        android:layout_gravity="clip_vertical"
+        android:clickable="true" />
+    <EditText
+        android:inputType="number|text"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/editText_networkid" />
+    <TextView
+        android:text="Erste Hostadresse: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView_firsthost" />
+    <EditText
+        android:inputType="number|text"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/editText_firsthost" />
+    <TextView
+        android:text="Letzte Hostadresse: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView_lasthost" />
+    <EditText
+        android:inputType="number|text"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/editText_lasthost" />
+ <TextView
+        android:text="Hostadressen gesamt: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView_hosttotal" />
+    <EditText
+        android:inputType="number|text"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/editText_hosttotal" />
+ <TextView
+        android:text="Broadcastadresse: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView_broadcast" />
+    <EditText
+        android:inputType="number|text"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/editText_broadcast" />
+ <TextView
+        android:text="Subnetzmaske: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView_subnetmask" />
+    <EditText
+        android:inputType="number|text"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/editText_subnetmask" />
+    <Button
+        android:text="Überprüfen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:onClick="" />
+
+</LinearLayout>

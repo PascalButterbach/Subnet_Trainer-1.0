@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_LIBRARY", "IP_LIBRARY\IP_LIBRARY.csproj", "{EF5538F7-A1C5-4535-9039-88988F3E21F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnettingTrainerWpf", "SubnettingTrainerWpf\SubnettingTrainerWpf.csproj", "{978B2BF3-1FFD-43F6-B101-8237B0C5003B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubnettingTrainerWpf", "SubnettingTrainerWpf\SubnettingTrainerWpf.csproj", "{978B2BF3-1FFD-43F6-B101-8237B0C5003B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnettingTrainerConsole", "SubnettingTrainerConsole\SubnettingTrainerConsole.csproj", "{E156A6AE-E189-43A7-ACD8-1B512856420D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubnettingTrainerConsole", "SubnettingTrainerConsole\SubnettingTrainerConsole.csproj", "{E156A6AE-E189-43A7-ACD8-1B512856420D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnettingTrainer_Android", "SubnettingTrainer_Android\SubnettingTrainer_Android.csproj", "{997C9985-1F04-44FA-B488-081B868D9DDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,12 @@ Global
 		{E156A6AE-E189-43A7-ACD8-1B512856420D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E156A6AE-E189-43A7-ACD8-1B512856420D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E156A6AE-E189-43A7-ACD8-1B512856420D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997C9985-1F04-44FA-B488-081B868D9DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997C9985-1F04-44FA-B488-081B868D9DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997C9985-1F04-44FA-B488-081B868D9DDD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{997C9985-1F04-44FA-B488-081B868D9DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997C9985-1F04-44FA-B488-081B868D9DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997C9985-1F04-44FA-B488-081B868D9DDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

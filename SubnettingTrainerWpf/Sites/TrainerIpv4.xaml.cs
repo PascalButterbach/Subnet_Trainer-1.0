@@ -43,10 +43,7 @@ namespace SubnettingTrainerWpf.Sites
             ResetUserInput();
         }
 
-        private void btn_check_Click(object sender, RoutedEventArgs e)
-        {
-            // Eingabe mit Lösung vergleichen und Korrektur ausgeben
-        }
+       
 
         private void btn_solution_Click(object sender, RoutedEventArgs e)
         {
@@ -56,12 +53,12 @@ namespace SubnettingTrainerWpf.Sites
         }
         void CompareUserInput()
         {
-            lbl_networkid.Foreground = (tb_networkid.Text == dataSet[2]) ? Brushes.DarkGreen : Brushes.DarkRed;
-            lbl_firsthost.Foreground = (tb_firsthost.Text == dataSet[3]) ? Brushes.DarkGreen : Brushes.DarkRed;
-            lbl_lasthost.Foreground = (tb_lasthost.Text == dataSet[4]) ? Brushes.DarkGreen : Brushes.DarkRed;
-            lbl_hosttotal.Foreground = (tb_hosttotal.Text == dataSet[6]) ? Brushes.DarkGreen : Brushes.DarkRed;
-            lbl_broadcast.Foreground = (tb_broadcast.Text == dataSet[5]) ? Brushes.DarkGreen : Brushes.DarkRed;
-            lbl_subnetmask.Foreground = (tb_subnetmask.Text == dataSet[1]) ? Brushes.DarkGreen : Brushes.DarkRed;
+            lbl_networkid.Foreground = (tb_networkid.Text == dataSet[2]) ? Brushes.Green : Brushes.Red;
+            lbl_firsthost.Foreground = (tb_firsthost.Text == dataSet[3]) ? Brushes.Green : Brushes.Red;
+            lbl_lasthost.Foreground = (tb_lasthost.Text == dataSet[4]) ? Brushes.Green : Brushes.Red;
+            lbl_hosttotal.Foreground = (tb_hosttotal.Text == dataSet[6]) ? Brushes.Green : Brushes.Red;
+            lbl_broadcast.Foreground = (tb_broadcast.Text == dataSet[5]) ? Brushes.Green : Brushes.Red;
+            lbl_subnetmask.Foreground = (tb_subnetmask.Text == dataSet[1]) ? Brushes.Green : Brushes.Red;
         }
         void ResetUserInput()
         {
