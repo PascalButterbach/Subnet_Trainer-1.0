@@ -24,7 +24,7 @@
             <Label x:Name="lbl_lasthost" Content="Letzte Hostadresse" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0"/>
             <TextBox x:Name="tb_lasthost" Text="0.0.0.0" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
 
-            <Label x:Name="lbl_hosttotal" Content="Hostadressen gesamt" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0" />
+            <Label x:Name="lbl_hosttotal" Content="Hostadressen total" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0" />
             <TextBox x:Name="tb_hosttotal" Text="254" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
 
 
@@ -41,7 +41,7 @@
             <TextBox x:Name="tb_solution_firsthost" Text="0.0.0.0" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Label Content="Letzte Hostadresse" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0"/>
             <TextBox x:Name="tb_solution_lasthost" Text="0.0.0.0" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Label x:Name="lbl_solution_hosttotal" Content="Hostadressen gesamt" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0"/>
+            <Label x:Name="lbl_solution_hosttotal" Content="Hostadressen total" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0"/>
             <TextBox x:Name="tb_solution_hosttotal" Text="254" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
 
             <Label Content="Broadcastadresse" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0"/>

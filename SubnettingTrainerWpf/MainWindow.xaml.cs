@@ -12,11 +12,14 @@ namespace SubnettingTrainerWpf
         Sites.TrainerIpv4 siteIPV4 = new Sites.TrainerIpv4();
         Sites.Home siteHome = new Sites.Home();
         Sites.Ipv4Generate siteIpv4Generate = new Sites.Ipv4Generate();
+        Sites.Subnetting siteSubnetting = new Sites.Subnetting();
         public MainWindow()
         {
             InitializeComponent();
             mainFrame.Content = siteHome;
 
+
+            IP_LIBRARY.Subnet sb = new IP_LIBRARY.Subnet();
 
         }
 
@@ -44,6 +47,11 @@ namespace SubnettingTrainerWpf
         {
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
+        }
+
+        private void btn_ipv4_trainer_subnet_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = siteSubnetting;
         }
     }
 }

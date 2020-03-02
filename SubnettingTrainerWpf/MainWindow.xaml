@@ -8,20 +8,20 @@
         Title="Subnetting Trainer" Height="625" Width="620" Background="#FF404040">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="68.04"/>
         </Grid.RowDefinitions>
-        <StackPanel  Orientation="Horizontal" Margin="0,12,0,25" Grid.Row="1" Background="#FF4F4F4F" Grid.ColumnSpan="2">
-            <Button x:Name="btn_home" Content="Home" Margin="25,0,0,0" Width="80" Height="30" Background="#FF404040" Foreground="White" Click="btn_home_Click" />
-            <Button x:Name="btn_ipv4_trainer" Content="IpV4 Trainer" Margin="25,0,0,0" Width="120" Height="30" Background="#FF404040" Foreground="White" Click="btn_ipv4_trainer_Click" />
-            <Button x:Name="btn_ipv4_generate" Content="IpV4 Aufgaben generieren" Margin="25,0,25,0" Width="200" Height="30" Background="#FF404040" Foreground="White" Click="btn_ipv4_generate_Click" />
-            <Button x:Name="btn_exit" Content="Exit" Width="100" Height="30" Background="#FF404040" Foreground="White" Click="btn_exit_Click" />
+        <StackPanel  Orientation="Horizontal" Margin="0,12,0,25" Grid.Row="1" Background="#FF4F4F4F">
+            <Button x:Name="btn_home" Content="Home" Margin="25,0,0,0" Width="47" Height="30" Background="#FF404040" Foreground="White" Click="btn_home_Click" />
+            <Button x:Name="btn_ipv4_trainer" Content="IpV4:analysiere" Margin="25,0,0,0" Width="96" Height="30" Background="#FF404040" Foreground="White" Click="btn_ipv4_trainer_Click" />
+            <Button x:Name="btn_ipv4_trainer_subnet" Content="IpV4:teile" Margin="25,0,0,0" Width="96" Height="30" Background="#FF404040" Foreground="White" Click="btn_ipv4_trainer_subnet_Click" />
+            <Button x:Name="btn_ipv4_generate" Content="Aufgaben generieren" Margin="25,0,25,0" Width="145" Height="30" Background="#FF404040" Foreground="White" Click="btn_ipv4_generate_Click" />
+            <Button x:Name="btn_exit" Content="Exit" Width="57" Height="30" Background="#FF404040" Foreground="White" Click="btn_exit_Click" />
         </StackPanel>
-        <Frame x:Name="mainFrame" Grid.Row="0" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        <Frame x:Name="mainFrame" Grid.Row="0" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

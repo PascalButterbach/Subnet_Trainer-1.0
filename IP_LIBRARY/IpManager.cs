@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace IP_LIBRARY
@@ -32,6 +31,11 @@ namespace IP_LIBRARY
             ipReturn[6] = ipDataset.Last().Usable;
             ipReturn[7] = ipDataset.Last().Cidr;
             return ipReturn;
+        }
+
+        public Subnet GetRandomSubnet()
+        {
+            return new Subnet();
         }
 
         public List<Ip> GetList(int v)
