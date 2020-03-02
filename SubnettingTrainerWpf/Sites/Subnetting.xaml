@@ -7,11 +7,78 @@
       mc:Ignorable="d" Background="#FF404040"
        d:DesignHeight="600" d:DesignWidth="620"
       Title="Subnetting">
-
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF464646"/>
+                        <GradientStop Color="#FF4F4F4F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0.8">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF1655B0" Offset="1"/>
+                                    <GradientStop Color="#FF01A3FF" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF323232"/>
+                                <GradientStop Color="#FF2C7CAA" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF191919"/>
+                                <GradientStop Color="#FF3F5380" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border BorderThickness="1">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF1655B0" Offset="1"/>
+                                    <GradientStop Color="#FF01A3FF" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0" Background="#FF4F4F4F">
-            <Button x:Name="btn_random"  Content="Zufällig" Margin="340,0,25,0" Width="94" Height="30" Background="#FF404040" Foreground="White" Click="btn_random_Click"/>
-            <Button x:Name="btn_solution" Content="Lösung anzeigen" Width="130" Height="30" Background="#FF404040" Foreground="White" Click="btn_solution_Click"/>
+            <Button x:Name="btn_random"  Content="Zufällig" Margin="340,0,25,0" Width="94" Height="30" Click="btn_random_Click"/>
+            <Button x:Name="btn_solution" Content="Lösung anzeigen" Width="130" Height="30"  Click="btn_solution_Click"/>
         </StackPanel>
         <StackPanel Height="448" VerticalAlignment="Top" Margin="25,80,28,0" Background="#FF343434" >
             <Label Content="Subnetting:" Height="36" FontSize="19" Foreground="White" Background="#FF4F4F4F"/>
@@ -19,11 +86,11 @@
             <Label Content="Berechne die Subnetze, nenne die NetzID des ersten " FontSize="19" Foreground="White" />
             <Label Content="und letzten Subnetzes und die Anzahl an Subnetzen total." FontSize="19" Foreground="White" />
             <Label x:Name="lbl_first_subnet" Content="Netzwerk ID 1. Subnetz" Height="31" FontSize="19" Foreground="White" Margin="9,20,0,0" />
-            <TextBox x:Name="tb_first_subnet" Text="0.0.0.0/0" Height="30" FontSize="18" Background="#FF454545" Foreground="White" Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <TextBox x:Name="tb_first_subnet" Text="0.0.0.0/0" Height="30" FontSize="18"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Label x:Name="lbl_last_subnet" Content="Netzwerk ID letztes Subnetz" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0" />
-            <TextBox x:Name="tb_last_subnet" Text="0.0.0.0/0" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <TextBox x:Name="tb_last_subnet" Text="0.0.0.0/0" Height="30" FontSize="18"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Label x:Name="lbl_subnet_total" Content="Subnetze total" Height="34" FontSize="19" Foreground="White" Margin="9,0,0,0"/>
-            <TextBox x:Name="tb_subnet_total" Text="0.0.0.0/0" Height="30" FontSize="18" Background="#FF454545" Foreground="White"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <TextBox x:Name="tb_subnet_total" Text="0.0.0.0/0" Height="30" FontSize="18"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
         </StackPanel>
     </Grid>
 </Page>
