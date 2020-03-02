@@ -83,8 +83,8 @@
         <StackPanel Height="448" VerticalAlignment="Top" Margin="25,80,28,0" Background="#FF343434" >
             <Label Content="Subnetting:" Height="36" FontSize="19" Foreground="White" Background="#FF4F4F4F"/>
             <Label x:Name="lbl_calculate" Content="Das Netzwerk: X ist gegeben. CIDR neu : /X" FontSize="19" Foreground="White" />
-            <Label Content="Berechne die Subnetze, nenne die NetzID des ersten " FontSize="19" Foreground="White" />
-            <Label Content="und letzten Subnetzes und die Anzahl an Subnetzen total." FontSize="19" Foreground="White" />
+            <Label Content="Berechne die Subnetze und gebe die NetzID des ersten Subnetzes, " FontSize="19" Foreground="White" />
+            <Label Content="des letzten Subnetzes und die Anzahl an Subnetzen total an." FontSize="19" Foreground="White" />
             <Label x:Name="lbl_first_subnet" Content="Netzwerk ID 1. Subnetz" Height="31" FontSize="19" Foreground="White" Margin="9,20,0,0" />
             <TextBox x:Name="tb_first_subnet" Text="0.0.0.0/0" Height="30" FontSize="18"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Label x:Name="lbl_last_subnet" Content="Netzwerk ID letztes Subnetz" Height="31" FontSize="19" Foreground="White" Margin="9,0,0,0" />

@@ -80,8 +80,8 @@ namespace SubnettingTrainerWpf.Sites
             {
                 tb_solve.AppendText("(" + counter + ") BERECHNE FÜR IP:" + subnet.IpAdress + "/" + subnet.CidrOld + "\n");
                 tb_solve.AppendText("CIDR NEU: /" + subnet.CidrNew + "\n");
-                tb_solve.AppendText("1. Subnetz:\n");
-                tb_solve.AppendText("letztes Subnetz:\n");
+                tb_solve.AppendText("1. Subnetz NetzID:\n");
+                tb_solve.AppendText("letztes Subnetz NetzID:\n");
                 tb_solve.AppendText("Subnetze total:\n\n");
                 counter++;
             }
@@ -95,9 +95,9 @@ namespace SubnettingTrainerWpf.Sites
             {
                 tb_solution.AppendText("(" + counter + ") LÖSUNG FÜR IP:" + subnet.IpAdress + "/" + subnet.CidrOld + "\n");
                 tb_solution.AppendText("CIDR NEU: /" + subnet.CidrNew + "\n");
-                tb_solution.AppendText("1. Subnetz :" + subnet.subnetArr[0] + "\n");
-                tb_solution.AppendText("letztes Subnetz :" + subnet.subnetArr[subnet.subnetArr.Length - 1] + "\n");
-                tb_solution.AppendText("Subnetze total :" + subnet.subnetCount + "\n\n");
+                tb_solution.AppendText("1. Subnetz NetzID :" + subnet.subnetArr[0] + "\n");
+                tb_solution.AppendText("letztes Subnetz NetzID :" + subnet.subnetArr[subnet.subnetArr.Length - 1] + "\n");
+                tb_solution.AppendText("Subnetze total NetzID :" + subnet.subnetCount + "\n\n");
                 counter++;
             }
         }
