@@ -12,7 +12,7 @@
         <Label Content="SUBNETTING" HorizontalAlignment="Left" Margin="80,290,0,0" VerticalAlignment="Top" Height="120" Width="444" Foreground="White" FontSize="72" Panel.ZIndex="3"/>
         <Label Content="TRAINER" HorizontalAlignment="Left" Margin="218,354,0,0" VerticalAlignment="Top" Height="110" Width="306" Foreground="White" FontSize="72" Panel.ZIndex="3"/>
         <Label Content="pascal@butterbach.org" HorizontalAlignment="Left" Margin="414,436,0,0" VerticalAlignment="Top" Height="28" Width="106" Foreground="White" FontSize="8" Panel.ZIndex="3"/>
-        <Image Margin="28,-1,0,10" Stretch="Fill" Source="/bg_home.png" Panel.ZIndex="2"/>
+        <Image Margin="0,-1,0,10" Stretch="Fill" Source="/bg_home.png" Panel.ZIndex="2" MouseDown="Image_MouseDown"/>
 
     </Grid>
 </Page>
