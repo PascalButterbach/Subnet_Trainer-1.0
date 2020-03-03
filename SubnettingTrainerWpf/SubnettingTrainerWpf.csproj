@@ -21,4 +21,10 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="style.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
 </Project>

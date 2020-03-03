@@ -7,74 +7,7 @@
       mc:Ignorable="d"  
       d:DesignHeight="600" d:DesignWidth="620"
       Title="TrainerIpv4" Background="#FF404040">
-    <Page.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF464646"/>
-                        <GradientStop Color="#FF4F4F4F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}" BorderThickness="0.8">
-                            <Border.BorderBrush>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF1655B0" Offset="1"/>
-                                    <GradientStop Color="#FF01A3FF" Offset="0"/>
-                                </LinearGradientBrush>
-                            </Border.BorderBrush>
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background">
-                        <Setter.Value>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FF323232"/>
-                                <GradientStop Color="#FF2C7CAA" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-                <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Background">
-                        <Setter.Value>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FF191919"/>
-                                <GradientStop Color="#FF3F5380" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        <Style TargetType="{x:Type TextBox}">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Border BorderThickness="1">
-                            <Border.BorderBrush>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF1655B0" Offset="1"/>
-                                    <GradientStop Color="#FF01A3FF" Offset="0"/>
-                                </LinearGradientBrush>
-                            </Border.BorderBrush>
-                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
+    
     <Grid>
         <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0" Background="#FF4F4F4F">
             <TextBox x:Name="tb_ip_entry" Text="127.0.0.1/12" Width="188" Height="30" FontSize="18"  Margin="25,0,20,0"/>
