@@ -18,7 +18,7 @@
         <StackPanel Height="448" VerticalAlignment="Top" Margin="25,80,300,0" Background="#FF343434" >
             <Label x:Name="lbl_calculate" Content="Berechne:" Height="36" FontSize="19" Foreground="White" Background="#FF1BA2E6"/>
             <Label x:Name="lbl_networkid" Content="Netzwerk ID" Height="31"  Margin="9,20,0,-5" />
-            <TextBox x:Name="tb_networkid" Text="0.0.0.0" Height="30" FontSize="18" Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <TextBox x:Name="tb_networkid" Text="0.0.0.0" Height="30"  FontSize="18" Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Label x:Name="lbl_firsthost" Content="Erste Hostadresse" Height="31" FontSize="19" Margin="9,0,0,-5" />
             <TextBox x:Name="tb_firsthost" Text="0.0.0.0" Height="30" FontSize="18"  Width="260" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Label x:Name="lbl_lasthost" Content="Letzte Hostadresse" Height="31" Margin="9,0,0,-5"/>

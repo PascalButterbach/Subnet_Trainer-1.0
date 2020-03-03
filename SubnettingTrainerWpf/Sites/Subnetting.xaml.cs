@@ -29,7 +29,7 @@ namespace SubnettingTrainerWpf.Sites
             btn_random.IsEnabled = false;
             btn_solution.IsEnabled = true;
             btn_solution.Foreground = Brushes.WhiteSmoke;
-            btn_random.Foreground = Brushes.Gainsboro;
+            btn_random.Foreground = Brushes.White;
         }
 
         private void btn_solution_Click(object sender, RoutedEventArgs e)
@@ -37,7 +37,7 @@ namespace SubnettingTrainerWpf.Sites
             CompareUserInput();
             btn_random.IsEnabled = true;
             btn_solution.IsEnabled = false;
-            btn_solution.Foreground = Brushes.Gainsboro;
+            btn_solution.Foreground = Brushes.White;
             btn_random.Foreground = Brushes.WhiteSmoke;
         }
                

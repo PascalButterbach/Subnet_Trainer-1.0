@@ -1,5 +1,6 @@
 ﻿using IP_LIBRARY;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -28,13 +29,21 @@ namespace SubnettingTrainerWpf.Sites
 
         private void btn_custom_Click(object sender, RoutedEventArgs e)
         {
-            dataSet = ipManager.GetDataByIp(tb_ip_entry.Text);
-            lbl_calculate.Content = "Berechne: " + dataSet[0] + "/" + dataSet[7];
-            ClearSolution();
-            ResetUserInput();
-            btn_solution.IsEnabled = true;
-            btn_random.IsEnabled = false;
-            btn_custom.IsEnabled = false;
+
+            string pattern = @"\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(/[0-9]|[1-2][0-9]|30)\b";
+
+
+
+            if (Regex.IsMatch(tb_ip_entry.Text, pattern))
+            {
+                dataSet = ipManager.GetDataByIp(tb_ip_entry.Text);
+                lbl_calculate.Content = "Berechne: " + dataSet[0] + "/" + dataSet[7];
+                ClearSolution();
+                ResetUserInput();
+                btn_solution.IsEnabled = true;
+                btn_random.IsEnabled = false;
+                btn_custom.IsEnabled = false;
+            }
         }
 
         private void btn_random_Click(object sender, RoutedEventArgs e)
@@ -48,8 +57,8 @@ namespace SubnettingTrainerWpf.Sites
             btn_random.IsEnabled = false;
             btn_custom.IsEnabled = false;
             btn_solution.Foreground = Brushes.WhiteSmoke;
-            btn_random.Foreground = Brushes.Gainsboro;
-            btn_custom.Foreground = Brushes.Gainsboro;
+            btn_random.Foreground = Brushes.White;
+            btn_custom.Foreground = Brushes.White;
         }
 
 
@@ -62,7 +71,7 @@ namespace SubnettingTrainerWpf.Sites
             btn_solution.IsEnabled = false;
             btn_random.IsEnabled = true;
             btn_custom.IsEnabled = true;
-            btn_solution.Foreground = Brushes.Gainsboro;
+            btn_solution.Foreground = Brushes.White;
             btn_random.Foreground = Brushes.WhiteSmoke;
             btn_custom.Foreground = Brushes.WhiteSmoke;
         }

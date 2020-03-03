@@ -9,11 +9,11 @@
       Title="Ipv4Generate">
   
     <Grid>
-        <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0" Background="#FF4F4F4F">
+        <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0" Background="#FF1BA2E6">
             
             <Label Content="Anzahl: " FontSize="15" Foreground="White" Margin="200,0,5,0"/>
             <TextBox x:Name="tb_ammount" FlowDirection="RightToLeft" Text="32" Width="51" Height="30" FontSize="18" Margin="0,0,5,0"/>
-            <RadioButton x:Name="rb_anal" Content="Analyse" Margin="25,7,5,0" Background="#FF454545" Foreground="White"/>
+            <RadioButton x:Name="rb_anal" IsChecked="True" Content="Analyse" Margin="25,7,5,0" Background="#FF454545" Foreground="White"/>
             <RadioButton x:Name="rb_split" Content="Teilen" Margin="0,7,25,0" Background="#FF454545" Foreground="White"/>
             <Button Content="Generieren" Width="104" Height="30" Click="Button_Click"/>
         </StackPanel>
