@@ -15,11 +15,11 @@
             <RowDefinition/>
             <RowDefinition Height="68.04"/>
         </Grid.RowDefinitions>
-        <StackPanel  Orientation="Horizontal" Margin="0,12,0,25" Grid.Row="1" Background="#FF4F4F4F">
-            <Button x:Name="btn_home" Content="Home" Margin="25,0,0,0" Width="47" Height="30" Click="btn_home_Click" />
-            <Button x:Name="btn_ipv4_trainer" Content="IpV4:analysiere" Margin="25,0,0,0" Width="96" Height="30" Click="btn_ipv4_trainer_Click" />
-            <Button x:Name="btn_ipv4_trainer_subnet" Content="IpV4:teile" Margin="25,0,0,0" Width="96" Height="30" Click="btn_ipv4_trainer_subnet_Click" />
-            <Button x:Name="btn_ipv4_generate" Content="Aufgaben generieren" Margin="25,0,25,0" Width="145" Height="30" Click="btn_ipv4_generate_Click" />
+        <StackPanel  Orientation="Horizontal" Margin="0,12,0,25" Grid.Row="1" Background="#FF1BA2E6">
+            <Button x:Name="btn_home" Content="Home" Margin="25,0,0,0" Width="59" Height="30" Click="btn_home_Click" />
+            <Button x:Name="btn_ipv4_trainer" Content="IpV4:analysiere" Margin="25,0,0,0" Width="120" Height="30" Click="btn_ipv4_trainer_Click" />
+            <Button x:Name="btn_ipv4_trainer_subnet" Content="IpV4:teile" Margin="25,0,0,0" Width="83" Height="30" Click="btn_ipv4_trainer_subnet_Click" />
+            <Button x:Name="btn_ipv4_generate" Content="Aufgaben generieren" Margin="25,0,25,0" Width="155" Height="30" Click="btn_ipv4_generate_Click" />
             <Button x:Name="btn_exit" Content="Exit" Width="57" Height="30" Click="btn_exit_Click" />
         </StackPanel>
         <Frame x:Name="mainFrame" Grid.Row="0" NavigationUIVisibility="Hidden"/>

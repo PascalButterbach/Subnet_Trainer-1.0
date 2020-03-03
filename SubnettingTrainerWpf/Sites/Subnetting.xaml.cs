@@ -28,7 +28,8 @@ namespace SubnettingTrainerWpf.Sites
             Update();
             btn_random.IsEnabled = false;
             btn_solution.IsEnabled = true;
-            
+            btn_solution.Foreground = Brushes.WhiteSmoke;
+            btn_random.Foreground = Brushes.Gainsboro;
         }
 
         private void btn_solution_Click(object sender, RoutedEventArgs e)
@@ -36,6 +37,8 @@ namespace SubnettingTrainerWpf.Sites
             CompareUserInput();
             btn_random.IsEnabled = true;
             btn_solution.IsEnabled = false;
+            btn_solution.Foreground = Brushes.Gainsboro;
+            btn_random.Foreground = Brushes.WhiteSmoke;
         }
                
 
@@ -74,9 +77,9 @@ namespace SubnettingTrainerWpf.Sites
 
         private void ClearInput()
         {
-            tb_first_subnet.Foreground = Brushes.White;
-            tb_last_subnet.Foreground = Brushes.White;
-            tb_subnet_total.Foreground = Brushes.White;
+            tb_first_subnet.Foreground = Brushes.LightGray;
+            tb_last_subnet.Foreground = Brushes.LightGray;
+            tb_subnet_total.Foreground = Brushes.LightGray;
             tb_first_subnet.Text = "0.0.0.0/0";
             tb_last_subnet.Text = "0.0.0.0/0";
             tb_subnet_total.Text = "128";

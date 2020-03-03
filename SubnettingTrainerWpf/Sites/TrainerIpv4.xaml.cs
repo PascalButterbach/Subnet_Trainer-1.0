@@ -47,9 +47,12 @@ namespace SubnettingTrainerWpf.Sites
             btn_solution.IsEnabled = true;
             btn_random.IsEnabled = false;
             btn_custom.IsEnabled = false;
+            btn_solution.Foreground = Brushes.WhiteSmoke;
+            btn_random.Foreground = Brushes.Gainsboro;
+            btn_custom.Foreground = Brushes.Gainsboro;
         }
 
-       
+
 
         private void btn_solution_Click(object sender, RoutedEventArgs e)
         {
@@ -59,24 +62,27 @@ namespace SubnettingTrainerWpf.Sites
             btn_solution.IsEnabled = false;
             btn_random.IsEnabled = true;
             btn_custom.IsEnabled = true;
+            btn_solution.Foreground = Brushes.Gainsboro;
+            btn_random.Foreground = Brushes.WhiteSmoke;
+            btn_custom.Foreground = Brushes.WhiteSmoke;
         }
         void CompareUserInput()
         {
-            lbl_networkid.Foreground = (tb_networkid.Text == dataSet[2]) ? Brushes.Green : Brushes.Red;
-            lbl_firsthost.Foreground = (tb_firsthost.Text == dataSet[3]) ? Brushes.Green : Brushes.Red;
-            lbl_lasthost.Foreground = (tb_lasthost.Text == dataSet[4]) ? Brushes.Green : Brushes.Red;
-            lbl_hosttotal.Foreground = (tb_hosttotal.Text == dataSet[6]) ? Brushes.Green : Brushes.Red;
-            lbl_broadcast.Foreground = (tb_broadcast.Text == dataSet[5]) ? Brushes.Green : Brushes.Red;
-            lbl_subnetmask.Foreground = (tb_subnetmask.Text == dataSet[1]) ? Brushes.Green : Brushes.Red;
+            tb_networkid.Foreground = (tb_networkid.Text == dataSet[2]) ? Brushes.Green : Brushes.Red;
+            tb_firsthost.Foreground = (tb_firsthost.Text == dataSet[3]) ? Brushes.Green : Brushes.Red;
+            tb_lasthost.Foreground = (tb_lasthost.Text == dataSet[4]) ? Brushes.Green : Brushes.Red;
+            tb_hosttotal.Foreground = (tb_hosttotal.Text == dataSet[6]) ? Brushes.Green : Brushes.Red;
+            tb_broadcast.Foreground = (tb_broadcast.Text == dataSet[5]) ? Brushes.Green : Brushes.Red;
+            tb_subnetmask.Foreground = (tb_subnetmask.Text == dataSet[1]) ? Brushes.Green : Brushes.Red;
         }
         void ResetUserInput()
         {
-            lbl_networkid.Foreground = Brushes.White;
-            lbl_firsthost.Foreground = Brushes.White;
-            lbl_lasthost.Foreground = Brushes.White;
-            lbl_hosttotal.Foreground = Brushes.White;
-            lbl_broadcast.Foreground = Brushes.White;
-            lbl_subnetmask.Foreground = Brushes.White;
+            tb_networkid.Foreground = Brushes.LightGray;
+            tb_firsthost.Foreground = Brushes.LightGray;
+            tb_lasthost.Foreground = Brushes.LightGray;
+            tb_hosttotal.Foreground = Brushes.LightGray;
+            tb_broadcast.Foreground = Brushes.LightGray;
+            tb_subnetmask.Foreground = Brushes.LightGray;
             tb_networkid.Text = "0.0.0.0";
             tb_firsthost.Text = "0.0.0.0";
             tb_lasthost.Text = "0.0.0.0";
