@@ -35,7 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net.IPNetwork, Version=2.4.0.0, Culture=neutral, PublicKeyToken=717343cc2c25edcf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\IP_LIBRARY\IP_LIBRARY\System.Net.IPNetwork.dll</HintPath>
+      <HintPath>.\System.Net.IPNetwork.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="System.Net.IPNetwork.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
